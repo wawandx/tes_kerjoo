@@ -40,9 +40,9 @@ const Home = (props) => {
       let time =
         dateObj.getHours() +
         ':' +
-        dateObj.getMinutes() +
+        ('0' + dateObj.getMinutes()).slice(-2) +
         ':' +
-        dateObj.getSeconds();
+        ('0' + dateObj.getSeconds()).slice(-2);
 
       await GetLocation.getCurrentPosition({
         enableHighAccuracy: true,
